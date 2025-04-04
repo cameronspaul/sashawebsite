@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@700&display=swap');
+
+/* Add global styles here */
+
+:root {
+  --color-black: #000000;
+  --color-yellow-gold: #f0c300; /* Extracted from logo */
+  --color-red: #c83737;         /* Extracted from logo */
+  --color-teal: #7bc8c8;         /* Extracted from logo */
+  --color-white: #FFFFFF;
+  --color-off-white: #FAFAFA;
+
+  --font-body: 'Montserrat', sans-serif;
+  --font-heading: 'Oswald', sans-serif; /* Added Heading Font */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-black);
+  color: var(--color-off-white);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1; /* Ensure main content pushes footer down */
+  padding: 1rem; /* Add some basic padding */
+}
+
+/* Basic reset/normalize additions */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-red); /* Default link color based on palette */
+  text-decoration: none; /* Remove underline by default */
+}
+
+a:hover {
+  color: var(--color-yellow-gold); /* Use primary accent for hover */
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-family: var(--font-heading);
+  font-weight: 700; /* Oswald Bold */
+  color: var(--color-yellow-gold); /* Default heading color */
+  text-transform: uppercase; /* Match logo vibe */
+  letter-spacing: 1px;
+}
+
+/* Add specific h1, h2 etc styles if needed */
+h1 {
+  font-size: 3rem; /* Example size */
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.2rem; /* Example size */
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below image */
+}
+
+/* General Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-yellow-gold);
+  color: var(--color-black);
+  border: 2px solid var(--color-yellow-gold);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border-color: var(--color-red);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-red);
+  border: 2px solid var(--color-red);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  transform: scale(1.05);
+}

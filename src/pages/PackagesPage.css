@@ -1,0 +1,123 @@
+.packages-page h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-red);
+}
+
+.packages-intro p {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.package-item {
+  background-color: #1a1a1a;
+  padding: 2rem 1.5rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative; /* For badge positioning */
+}
+
+.package-item h3 {
+  color: var(--color-yellow-gold);
+  margin-bottom: 1rem;
+}
+
+.package-description {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  min-height: 50px; /* Ensure consistent height */
+}
+
+.package-item ul {
+  list-style: disc; /* Use bullets for features */
+  margin-left: 1.5rem; /* Indent list */
+  text-align: left;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Push price/button down */
+}
+
+.package-item li {
+  margin-bottom: 0.5rem;
+}
+
+.package-pricing {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-teal); /* Tertiary accent for price */
+  margin-bottom: 1.5rem;
+}
+
+.package-item .btn {
+  width: 100%; /* Make button full width */
+}
+
+/* Styling for the main/popular package */
+.package-item.main-package {
+  border-color: var(--color-yellow-gold);
+  border-width: 2px;
+  transform: scale(1.03); /* Slightly larger */
+  box-shadow: 0 0 15px rgba(240, 195, 0, 0.3);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Add-ons & Custom Quote Sections */
+.add-ons-section,
+.custom-quote-cta {
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.add-ons-section h3,
+.custom-quote-cta h3 {
+  color: var(--color-teal);
+  margin-bottom: 1rem;
+}
+
+.add-ons-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 1rem auto;
+  max-width: 600px;
+}
+
+.add-ons-section li {
+  display: inline-block;
+  margin: 0.25rem 0.5rem;
+  padding: 0.2rem 0.6rem;
+  background-color: #333;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.custom-quote-cta p {
+  margin-bottom: 1.5rem;
+} 

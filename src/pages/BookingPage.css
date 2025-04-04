@@ -1,0 +1,262 @@
+.booking-page h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-red);
+}
+
+.booking-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 992px) {
+  .booking-content {
+    grid-template-columns: 1fr 2fr; /* Contact info smaller, form larger */
+  }
+}
+
+/* Contact Info Section */
+.contact-info h3 {
+  color: var(--color-yellow-gold);
+  margin-bottom: 1rem;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.contact-info li {
+  margin-bottom: 0.75rem;
+}
+
+.contact-info li strong {
+  color: var(--color-teal);
+  margin-right: 0.5rem;
+}
+
+.contact-info a {
+  color: var(--color-off-white); /* White links for direct contact */
+  text-decoration: underline;
+}
+
+.contact-info a:hover {
+  color: var(--color-yellow-gold);
+}
+
+.availability-note {
+  font-style: italic;
+  color: #ccc;
+  font-size: 0.9rem;
+  background-color: #1a1a1a; /* Subtle background */
+  padding: 1rem;
+  border-left: 3px solid var(--color-teal);
+  border-radius: 4px;
+}
+
+/* Booking Form Section */
+.booking-form-container h3 {
+  color: var(--color-yellow-gold);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.booking-form {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--color-off-white);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #444;
+  background-color: #333;
+  color: var(--color-off-white);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-yellow-gold);
+}
+
+/* Styling for native date/time inputs */
+.form-group input[type="date"],
+.form-group input[type="time"] {
+  color-scheme: dark; /* Improve appearance on dark background */
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resize */
+  min-height: 100px;
+}
+
+/* Split layout for groups */
+.form-group-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 576px) {
+  .form-group-split {
+     /* Adjust columns based on how many items are typical */
+     /* Example: 2 columns for email/phone, event date/type */
+     /* Example: 3 columns for start/end/guests */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  }
+}
+
+.booking-form button[type="submit"] {
+  width: 100%;
+  padding: 0.8rem 1.8rem;
+  margin-top: 1rem;
+}
+
+/* Submission Success Message */
+.submission-success {
+  background-color: rgba(123, 200, 200, 0.1); /* Light teal background */
+  border: 1px solid var(--color-teal);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.submission-success h4 {
+  color: var(--color-teal);
+  margin-bottom: 1rem;
+}
+
+/* Date Picker Specific Styles */
+.date-picker-wrapper .react-datepicker-wrapper {
+  width: 100%; /* Ensure wrapper takes full width */
+}
+
+.date-picker-wrapper .react-datepicker__input-container input {
+  width: 100%; /* Ensure input inside takes full width */
+  /* Inherits .form-control styles */
+}
+
+/* Styling the Calendar Popup */
+.react-datepicker {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  background-color: #2a2a2a; /* Dark background for calendar */
+  color: var(--color-off-white);
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.react-datepicker__header {
+  background-color: #333;
+  border-bottom: 1px solid #555;
+  padding-top: 8px;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  color: var(--color-yellow-gold);
+  font-weight: bold;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+  color: var(--color-off-white);
+  width: 2rem; /* Adjust spacing */
+  line-height: 2rem;
+}
+
+.react-datepicker__day:hover,
+.react-datepicker__month-text:hover,
+.react-datepicker__quarter-text:hover,
+.react-datepicker__year-text:hover {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border-radius: 4px;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+   background-color: var(--color-teal);
+   color: var(--color-black);
+   border-radius: 4px;
+}
+
+.react-datepicker__day--disabled {
+  color: #666;
+  cursor: default;
+}
+
+.react-datepicker__day--disabled:hover {
+  background-color: transparent;
+}
+
+.react-datepicker__navigation {
+  /* Adjust arrow color if needed */
+  top: 10px;
+}
+
+.react-datepicker__navigation--previous {
+  border-right-color: #ccc;
+}
+.react-datepicker__navigation--previous:hover {
+  border-right-color: var(--color-yellow-gold);
+}
+
+.react-datepicker__navigation--next {
+  border-left-color: #ccc;
+}
+.react-datepicker__navigation--next:hover {
+  border-left-color: var(--color-yellow-gold);
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::after {
+    border-bottom-color: #2a2a2a;
+} 
